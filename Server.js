@@ -18,10 +18,10 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((err) => console.error("❌ MongoDB connection failed:", err));
 
 // Import routes
-const cusRoutes = require("../Routes/cusRoutes");
-const invoiceRoutes = require("../backend/Routes/invoices");
-const AuthRoutes = require("../backend/Routes/AuthRoutes")
-const authMiddleware = require("../backend/Middleware/Auth")
+const cusRoutes = require("./Routes/cusRoutes");
+const invoiceRoutes = require("./Routes/invoices");
+const AuthRoutes = require("./Routes/AuthRoutes")
+const authMiddleware = require("./Middleware/Auth")
 
 // Use routes
 app.use("/api/auth", AuthRoutes)
